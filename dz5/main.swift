@@ -30,13 +30,13 @@ class DataBase{
         }
     }
     func NewUser()->(){
-        for i in 1...5{
+        for _ in 1...5{
             print("Enter Name:")
-            var name = readLine()!
+            let name = readLine()!
             print("Enter Lastname")
-            var lastname = readLine()!
+            let lastname = readLine()!
             print("Enter your country (Kyrgyzstan, USA, Russia):")
-            var country = readLine()!
+            let country = readLine()!
             var countrycode: CountryCode = .kyrgyzstan
             if country == "Kyrgyzstan"{
                 countrycode = .kyrgyzstan
@@ -46,7 +46,7 @@ class DataBase{
                 countrycode = .russia
             }
             print("Enter your Phone Number")
-            var number = readLine()!
+            let number = readLine()!
             users.append(User(name: name, lastname: lastname, code: countrycode, phoneNumber: number))
             print("Name:\(name), Lastname:\(lastname), phone number:\(countrycode.rawValue)\(number)")
         }
